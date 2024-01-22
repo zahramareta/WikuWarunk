@@ -36,27 +36,31 @@ const Sidebar = ({ title, children }) => {
                     {/** list menu */}
                     <div className="w-100 ps-3 d-flex flex-column" > {/** text-start : rata kiri  */}
                         <Link className="w-100 p-2 text-start text-decoration-none h6" to="/home">
-                            <b className="bi bi-house me-2" style={{ color: "#526D82" }}> Dashboard </b>
+                            <b className="bi bi-house-fill me-2" style={{ color: "#526D82" }}> Dashboard </b>
+                        </Link>
+
+                        <Link className={`w-100 p-2 text-start text-decoration-none h6 ${['kasir', 'manajer'].includes(role) ? 'd-block' : 'd-none'}`} to="/transaksi/chart">
+                            <b className="bi bi-bar-chart-fill me-2" style={{ color: "#526D82" }}> Chart </b>
                         </Link>
 
                         <Link className={`w-100 p-2 text-start text-decoration-none h6 ${['admin', 'manager', 'kasir'].includes(role) ? 'd-block' : 'd-none'}`} to="/menu">
-                            <b className="bi bi-list-task me-2" style={{ color: "#526D82" }}> Menu </b>
+                            <b className="bi bi-book-fill me-2" style={{ color: "#526D82" }}> Menu </b>
                         </Link>
 
                         <Link className={`w-100 p-2 text-start text-decoration-none h6 ${['admin', 'kasir'].includes(role) ? 'd-block' : 'd-none'}`} to="/meja">
-                            <b className="bi bi-plus-square me-2" style={{ color: "#526D82" }}> Meja </b>
+                            <b className="bi bi-plus-square-fill me-2" style={{ color: "#526D82" }}> Meja </b>
                         </Link>
 
                         <Link className={`w-100 p-2 text-start text-decoration-none h6 ${['admin', 'manager'].includes(role) ? 'd-block' : 'd-none'}`} to="/user">
-                            <b className="bi bi-person me-2" style={{ color: "#526D82" }}> User </b>
+                            <b className="bi bi-person-fill me-2" style={{ color: "#526D82" }}> User </b>
                         </Link>
 
-                        <Link className={`w-100 p-2 text-start text-decoration-none h6 ${['admin', 'kasir', 'manajer'].includes(role) ? 'd-block' : 'd-none'}`} to="/transaksi">
+                        <Link className={`w-100 p-2 text-start text-decoration-none h6 ${['kasir', 'manajer'].includes(role) ? 'd-block' : 'd-none'}`} to="/transaksi">
                             <b className="bi bi-receipt me-2" style={{ color: "#526D82" }}> Transaksi </b>
                         </Link>
 
                         <Link className="w-100 p-2 text-start text-decoration-none h6" to="/login" onClick={() => handleLogout()}>
-                            <b className="bi bi-door-open me-2" style={{ color: "#526D82" }}> Logout </b>
+                            <b className="bi bi-door-open-fill me-2" style={{ color: "#526D82" }}> Logout </b>
                         </Link>
                     </div>
                 </div>

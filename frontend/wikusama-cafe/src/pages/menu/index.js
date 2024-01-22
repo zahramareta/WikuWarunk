@@ -199,7 +199,7 @@ export default function Menu() {
                     <div className='modal-content'>
                         <form onSubmit={e => saveMenu(e)}>
                             {/* HEADER */}
-                            <div className='modal-header' style={{ background: '#E5E5CB' }}>
+                            <div className='modal-header' style={{ background: '#526D82', color: 'white' }}>
                                 <h4>Form Menu</h4>
                             </div>
 

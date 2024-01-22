@@ -9,5 +9,6 @@ app.post(`/transaksi`, authorization(["kasir"]), transaksiController.addTransaks
 app.put(`/transaksi/:id_transaksi`, authorization(["kasir"]), transaksiController.updateTransaksi)
 app.delete(`/transaksi/:id_transaksi`, authorization(["admin", "kasir"]), transaksiController.deleteTransaksi)
 app.post(`/transaksi/find`, authorization(["kasir", "admin", "manajer"]), transaksiController.findTransaksi)
+app.get(`/transaksi/chart`, authorization(["kasir", "manajer"]), transaksiController.chart)
 
 module.exports = app

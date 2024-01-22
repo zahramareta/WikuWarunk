@@ -8,6 +8,7 @@ import Middleware from './pages/middleware'
 import Sidebar from './pages/sidebar'
 import Meja from './pages/meja'
 import User from './pages/user'
+import Charts from './pages/chart/chart'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Routes>
         <Route path='/menu' element={<Middleware><Sidebar title="Daftar Menu"><Menu /></Sidebar></Middleware>}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path='/transaksi/chart' element={<Middleware><Sidebar title="Chart"><Charts /></Sidebar></Middleware>}></Route>
         <Route path='/transaksi' element={<Middleware><Sidebar title="Daftar Transaksi"><Transaksi /></Sidebar></Middleware>}></Route>
         <Route path='/home' element={<Middleware><Sidebar title="Home"><Home /></Sidebar></Middleware>}></Route>
         <Route path='/meja' element={<Middleware><Sidebar title="Daftar Meja"><Meja /></Sidebar></Middleware>}></Route>
